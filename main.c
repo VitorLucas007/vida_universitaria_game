@@ -1,5 +1,5 @@
 #include "jogo.h"
-// Função principal
+
 int main() {
     srand(time(NULL));
 
