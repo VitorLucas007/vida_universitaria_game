@@ -128,7 +128,7 @@ void atualizar_objetos() {
         // Aloca novos objetos
         for (int i = num_objetos; i < num_objetos + QTD_OBJETOS_POR_SEGUNDO; i++) {
             novos_objetos[i].x = rand() % (LARGURA_TELA - 50);
-            novos_objetos[i].y = -50; // Inicia fora da tela
+            novos_objetos[i].y = -50; 
             novos_objetos[i].capturado = 0;
             novos_objetos[i].tipo = (rand() % 2) == 0 ? 1 : -1;
         }
@@ -180,7 +180,7 @@ void exibir_resultados() {
     
     if (jogo_finalizado) {
         al_draw_text(fonte, al_map_rgb(255, 0, 0), LARGURA_TELA / 2, ALTURA_TELA / 2 - 50, ALLEGRO_ALIGN_CENTER, "GAME OVER!");
-        // Ajuste aqui: coloco a posição Y um pouco mais abaixo para os pontos
+
         al_draw_textf(fonte, al_map_rgb(255, 0, 0), LARGURA_TELA / 2, ALTURA_TELA / 2, ALLEGRO_ALIGN_CENTER, "Pontos coletados: %d", pontos);
     } else {
         al_draw_textf(fonte, al_map_rgb(255, 255, 255), LARGURA_TELA / 2, ALTURA_TELA / 2 - 50, ALLEGRO_ALIGN_CENTER, "Você coletou %d objetos!", pontos);
